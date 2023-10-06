@@ -1,0 +1,123 @@
+CREATE TABLE trainee (
+    id serial PRIMARY KEY NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    dob DATE NOT NULL,
+    gender VARCHAR(10) NOT NULL,
+    blood_group VARCHAR(5) NOT NULL,
+    qual VARCHAR(20) NOT NULL,
+    marital_status VARCHAR(15) NOT NULL,
+    staff_id VARCHAR(6) NOT NULL UNIQUE,
+    join_date DATE NOT NULL,
+    dept VARCHAR(30) NOT NULL,
+    designation VARCHAR(30) NOT NULL,
+    batch_no VARCHAR(6) NOT NULL,
+    stipend DECIMAL(8, 0) NOT NULL,
+    bank_no VARCHAR(20) NOT NULL UNIQUE,
+    mob_no VARCHAR(10) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    address VARCHAR(500)  NOT NULL
+);
+
+
+
+<window title="Trainee Information Form" border="normal" width="400px">
+    <grid>
+        <columns>
+            <column width="40%" />
+            <column width="60%" />
+        </columns>
+        <rows>
+            <row>
+                <label value="Name:" />
+                <textbox id="nameTextbox" width="80%" />
+            </row>
+            <row>
+                <label value="Date of Birth:" />
+                <datebox id="dobDatebox" width="80%" />
+            </row>
+            <row>
+                <label value="Gender:" />
+                <selectbox id="genderSelectbox" width="80%">
+                    <option label="Male" value="Male" />
+                    <option label="Female" value="Female" />
+                    <option label="Other" value="Other" />
+                </selectbox>
+            </row>
+            <row>
+                <label value="Blood Group:" />
+                <selectbox id="bloodGroupSelectbox" width="80%">
+                    <option label="A+" value="A+" />
+                    <option label="A-" value="A-" />
+                    <option label="B+" value="B+" />
+                    <!-- Add more blood group options as needed -->
+                </selectbox>
+            </row>
+            <row>
+                <label value="Qualification:" />
+                <textbox id="qualTextbox" width="80%" />
+            </row>
+            <row>
+                <label value="Marital Status:" />
+                <selectbox id="maritalStatusSelectbox" width="80%">
+                    <option label="Single" value="Single" />
+                    <option label="Married" value="Married" />
+                    <option label="Divorced" value="Divorced" />
+                    <!-- Add more marital status options as needed -->
+                </selectbox>
+            </row>
+            <row>
+                <label value="Staff ID:" />
+                <textbox id="staffIdTextbox" width="80%" />
+            </row>
+            <row>
+                <label value="Join Date:" />
+                <datebox id="joinDateDatebox" width="80%" />
+            </row>
+            <row>
+                <label value="Department:" />
+                <selectbox id="departmentSelectbox" width="80%">
+                    <option label="HR" value="HR" />
+                    <option label="IT" value="IT" />
+                    <option label="Finance" value="Finance" />
+                    <!-- Add more department options as needed -->
+                </selectbox>
+            </row>
+            <row>
+                <label value="Designation:" />
+                <selectbox id="designationSelectbox" width="80%">
+                    <option label="Trainee" value="Trainee" />
+                    <option label="Junior" value="Junior" />
+                    <option label="Senior" value="Senior" />
+                    <!-- Add more designation options as needed -->
+                </selectbox>
+            </row>
+            <row>
+                <label value="Batch No:" />
+                <textbox id="batchNoTextbox" width="80%" />
+            </row>
+            <row>
+                <label value="Stipend:" />
+                <decimalbox id="stipendDecimalbox" width="80%" />
+            </row>
+            <row>
+                <label value="Bank No:" />
+                <textbox id="bankNoTextbox" width="80%" />
+            </row>
+            <row>
+                <label value="Mobile No:" />
+                <textbox id="mobileNoTextbox" width="80%" />
+            </row>
+            <row>
+                <label value="Email:" />
+                <textbox id="emailTextbox" width="80%" />
+            </row>
+            <row>
+                <label value="Address:" />
+                <textbox id="addressTextbox" width="80%" />
+            </row>
+            <row>
+                <button label="Submit" onClick="submitForm()" />
+            </row>
+        </rows>
+    </grid>
+</window>
