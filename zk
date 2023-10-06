@@ -20,6 +20,7 @@ CREATE TABLE trainee (
 
 
 
+<zk>
 <window title="Trainee Information Form" border="normal" width="400px">
     <grid>
         <columns>
@@ -37,20 +38,20 @@ CREATE TABLE trainee (
             </row>
             <row>
                 <label value="Gender:" />
-                <selectbox id="genderSelectbox" width="80%">
-                    <option label="Male" value="Male" />
-                    <option label="Female" value="Female" />
-                    <option label="Other" value="Other" />
-                </selectbox>
+                <combobox  id="genderSelectbox" width="80%" readonly="true">
+                    <comboitem label="Male" />
+                    <comboitem label="Female" />
+                    <comboitem label="Other" />
+                </combobox >
             </row>
             <row>
                 <label value="Blood Group:" />
-                <selectbox id="bloodGroupSelectbox" width="80%">
-                    <option label="A+" value="A+" />
-                    <option label="A-" value="A-" />
-                    <option label="B+" value="B+" />
+                <combobox  id="bloodGroupSelectbox" width="80%" readonly="true">
+                    <comboitem label="A+" />
+                    <comboitem label="A-"  />
+                    <comboitem label="B+"  />
                     <!-- Add more blood group options as needed -->
-                </selectbox>
+                </combobox >
             </row>
             <row>
                 <label value="Qualification:" />
@@ -58,12 +59,12 @@ CREATE TABLE trainee (
             </row>
             <row>
                 <label value="Marital Status:" />
-                <selectbox id="maritalStatusSelectbox" width="80%">
-                    <option label="Single" value="Single" />
-                    <option label="Married" value="Married" />
-                    <option label="Divorced" value="Divorced" />
+                <combobox  id="maritalStatusSelectbox" width="80%" readonly="true">
+                    <comboitem label="Single"  />
+                    <comboitem label="Married"  />
+                    <comboitem label="Divorced"  />
                     <!-- Add more marital status options as needed -->
-                </selectbox>
+                </combobox >
             </row>
             <row>
                 <label value="Staff ID:" />
@@ -75,21 +76,21 @@ CREATE TABLE trainee (
             </row>
             <row>
                 <label value="Department:" />
-                <selectbox id="departmentSelectbox" width="80%">
-                    <option label="HR" value="HR" />
-                    <option label="IT" value="IT" />
-                    <option label="Finance" value="Finance" />
+                <combobox  id="departmentSelectbox" width="80%" readonly="true">
+                    <comboitem label="HR"  value="HR"/>
+                    <comboitem label="IT"  value="IT"/>
+                    <comboitem label="Finance" value="Finance" />
                     <!-- Add more department options as needed -->
-                </selectbox>
+                </combobox >
             </row>
             <row>
                 <label value="Designation:" />
-                <selectbox id="designationSelectbox" width="80%">
-                    <option label="Trainee" value="Trainee" />
-                    <option label="Junior" value="Junior" />
-                    <option label="Senior" value="Senior" />
+                <combobox  id="designationSelectbox" width="80%" readonly="true">
+                    <comboitem label="Trainee" />
+                    <comboitem label="Junior"  />
+                    <comboitem label="Senior"  />
                     <!-- Add more designation options as needed -->
-                </selectbox>
+                </combobox >
             </row>
             <row>
                 <label value="Batch No:" />
@@ -121,3 +122,5 @@ CREATE TABLE trainee (
         </rows>
     </grid>
 </window>
+
+</zk>
